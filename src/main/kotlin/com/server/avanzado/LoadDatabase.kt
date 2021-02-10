@@ -16,8 +16,8 @@ class LoadDatabase {
     @Bean
     fun initDatabase(studentRepository: StudentRepository):CommandLineRunner {
        return CommandLineRunner{args:Array<String?>? ->
-            logger.info("Preloading " + studentRepository.save(Student("Paquito", "Chocolatero")))
-            logger.info("Preloading " + studentRepository.save(Student("Joan", "Bernat")))
+            logger.info("Preloading " + studentRepository.save(Jokes( "general","What do you call a group of killer whales playing instruments?","An Orca-stra.")))
+            logger.info("Preloading " + studentRepository.save(Jokes( "knock-knock", "Knock knock. \n Who's there? \n A broken pencil. \n A broken pencil who?","Never mind. It's pointless.")))
         }
     }
 
